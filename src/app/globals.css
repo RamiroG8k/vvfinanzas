@@ -5,25 +5,20 @@
 :root {
   --color-background: 240deg 5% 95%;
   --color-content: 240deg 5% 15%;
-  --color-accent: 25deg 100% 50%;
+  --color-accent: 40deg 100% 65%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: 240deg 5% 95%;
     --color-content: 240deg 5% 15%;
-    --color-accent: 25deg 100% 50%;
+    --color-accent: 40deg 100% 65%;
   }
 }
 
 body {
   color: hsl(var(--color-content));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      hsl(var(--color-background))
-    )
-    hsl(var(--color-accent));
+  background-color: hsl(var(--color-background));
 }
 
 @layer utilities {
