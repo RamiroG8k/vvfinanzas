@@ -19,6 +19,13 @@
 body {
   color: hsl(var(--color-content));
   background-color: hsl(var(--color-background));
+  height: 100svh;
+}
+
+@layer components {
+  .center {
+    @apply flex flex-col items-center justify-center;
+  }
 }
 
 @layer utilities {

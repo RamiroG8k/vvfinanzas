@@ -22,7 +22,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps) {
 	return (
 		<html lang="es">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				{children}
+			</body>
 		</html>
 	);
 }
