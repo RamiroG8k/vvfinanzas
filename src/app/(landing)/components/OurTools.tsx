@@ -16,8 +16,8 @@ const INFO = [
     }
 ];
 
-const OurTools = (props: React.HTMLProps<HTMLElement>) => (
-    <section className="bg-black text-white px-4 py-32 rounded-t-[5rem]" {...props}>
+const OurTools = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
+    <section className={`bg-black text-white px-4 py-32 rounded-t-[5rem] ${className}`} {...props}>
         <div className="max-w-screen-2xl mx-auto flex flex-col">
             <div className="center text-center">
                 <h2 className="text-3xl lg:text-5xl">Herramientas útiles</h2>

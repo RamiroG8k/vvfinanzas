@@ -4,16 +4,16 @@ class SavingsPlan extends Plan {
     constructor() {
         super({
             name: 'De ahorro',
-            description: 'Desarrollo de un plan de ahorro personalizado a un año',
+            description: 'Desarrollo de un plan de ahorro personalizado a un año para lograr metas financieras y crear hábitos de ahorro',
             goals: [
                 'Desarrollar nuevos hábitos de ahorro',
                 'Planificar un ahorro de emergencias',
                 'Definir y lograr metas financieras'
             ],
             features: [
-                'Plantilla para definir metas de ahorro',
+                'Plantillas para control mensual',
+                'Plantillas para definir metas de ahorro',
                 'Flujo anual proyectado con ahorro',
-                'Plantillas mensuales para control y clasificación de ingresos y gastos',
                 'Reporte anual del ejercicio'
             ],
             benefits: [
@@ -21,7 +21,7 @@ class SavingsPlan extends Plan {
                 'Ayuda a desarrollar nuevos hábitos de ahorro',
                 'Permite planificar para emergencias'
             ],
-            price: 150_00
+            price: 1_250_00
         });
     }
 }

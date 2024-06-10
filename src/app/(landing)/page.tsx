@@ -21,7 +21,7 @@ export default function Home() {
 
 			<Services id="services" className="py-10" />
 
-			<OurTools id="about" />
+			<OurTools id="about" className="pb-48" />
 
 			<Plans id="con" />
 

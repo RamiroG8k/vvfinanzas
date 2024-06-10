@@ -34,7 +34,8 @@ export default class Plan {
 
         return Intl.NumberFormat('es-MX', {
             currency: 'MXN',
-            style: 'currency'
+            style: 'currency',
+            minimumFractionDigits: 0
         }).format(priceWithoutCents);
     }
 };

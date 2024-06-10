@@ -4,25 +4,24 @@ class StrategicPlan extends Plan {
     constructor() {
         super({
             name: 'Estratégico',
-            description: 'Desarrollo de un plan de acción personalizado con estrategia de inversión y retiro',
+            description: 'Desarrollo de un plan de acción personalizado con estrategia de inversión y retiro para lograr la libertad financiera',
             goals: [
                 'Educación financiera en temas de inversión y retiro',
                 'Planificar metas a corto, mediano y largo plazo en búsqueda de la libertad financiera'
             ],
             features: [
-                'Plantilla para definir metas de ahorro enfocadas en inversión a corto, mediano y largo plazo',
-                'Plantilla para el control de las inversiones a corto plazo',
+                'Plantillas para control mensual',
+                'Plantillas para definir metas de ahorro',
+                'Plantillas para el control de las inversiones',
                 'Flujo anual proyectado con ahorro e inversiones',
-                'Plantillas mensuales para control y clasificación de ingresos y gastos',
-                'Reporte anual del ejercicio',
-                'Acompañamiento, gestión y asesoría personalizada'
+                'Reporte anual del ejercicio'
             ],
             benefits: [
                 'Plan integral para alcanzar metas financieras a corto, mediano y largo plazo',
                 'Preparación para la jubilación y la libertad financiera',
                 'Asesoría personalizada para inversiones'
             ],
-            price: 249_99
+            price: 2_000_00
         });
     }
 }
