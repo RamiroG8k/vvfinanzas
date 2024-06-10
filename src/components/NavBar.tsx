@@ -23,7 +23,7 @@ const NavBar = () => (
                     Home
                 </Link>
 
-                <Link href="#objectives" className="link">
+                <Link href="#goals" className="link">
                     Objetivos
                 </Link>
 
