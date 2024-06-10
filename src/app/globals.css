@@ -28,7 +28,7 @@ body {
   }
 
   .link {
-    @apply text-black hover:text-yellow-500 transition-colors;
+    @apply text-black hover:text-accent transition-colors;
   }
 }
 

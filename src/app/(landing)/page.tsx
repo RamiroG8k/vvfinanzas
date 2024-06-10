@@ -1,6 +1,14 @@
 import { Fragment } from 'react';
 
-import { Goals, Header } from './components';
+import {
+	Header,
+	Goals,
+	PromotionalBanner,
+	Services,
+	OurTools,
+	Plans,
+	Contact
+} from './components';
 
 export default function Home() {
 	return (
@@ -8,6 +16,16 @@ export default function Home() {
 			<Header />
 
 			<Goals id="goals" />
+
+			<PromotionalBanner className="my-20" />
+
+			<Services id="services" />
+
+			<OurTools id="about" />
+
+			<Plans id="con" />
+
+			<Contact id="con" />
 		</Fragment>
 	);
 }

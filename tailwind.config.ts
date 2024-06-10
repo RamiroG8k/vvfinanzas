@@ -16,14 +16,10 @@ const config: Config = {
       colors: {
         background: 'hsl(var(--color-background) / <alpha-value>)',
         content: 'hsl(var(--color-content) / <alpha-value>)',
-        primary: {
-          light: 'hsl(35, 95%, 75%)',
-          DEFAULT: 'hsl(var(--color-primary) / <alpha-value>)',
-          dark: 'hsl(35, 95%, 35%)'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--color-secondary) / <alpha-value>)',
-          dark: 'hsl(265, 95%, 35%)'
+        accent: {
+          // light: 'hsl(35, 95%, 75%)',
+          DEFAULT: 'hsl(var(--color-accent) / <alpha-value>)'
+          // dark: 'hsl(35, 95%, 35%)'
         }
       }
     }
