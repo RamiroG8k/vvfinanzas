@@ -18,13 +18,17 @@
 
 body {
   color: hsl(var(--color-content));
-  background-color: hsl(var(--color-background));
+  background-color: white;
   height: 100svh;
 }
 
 @layer components {
   .center {
     @apply flex flex-col items-center justify-center;
+  }
+
+  .link {
+    @apply text-black hover:text-yellow-500 transition-colors;
   }
 }
 

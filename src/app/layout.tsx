@@ -1,3 +1,5 @@
+import NavBar from '@/components/NavBar';
+
 import { clientEnv } from '@/env/schema.mjs';
 import { inter } from '@/fonts';
 
@@ -23,6 +25,8 @@ export default function RootLayout({ children }: LayoutProps) {
 	return (
 		<html lang="es">
 			<body className={inter.className}>
+				<NavBar />
+
 				{children}
 			</body>
 		</html>
