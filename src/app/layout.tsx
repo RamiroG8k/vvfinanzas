@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 
 import { clientEnv } from '@/env/schema.mjs';
@@ -28,6 +29,8 @@ export default function RootLayout({ children }: LayoutProps) {
 				<NavBar />
 
 				{children}
+
+				<Footer />
 			</body>
 		</html>
 	);
