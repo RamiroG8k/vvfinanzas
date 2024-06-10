@@ -19,7 +19,7 @@ export default function Home() {
 
 			<PromotionalBanner className="my-20" />
 
-			<Services id="services" />
+			<Services id="services" className="py-10" />
 
 			<OurTools id="about" />
 
