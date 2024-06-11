@@ -16,10 +16,15 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: hsl(var(--color-content));
   background-color: white;
-  height: 100svh;
 }
 
 @layer components {
@@ -29,6 +34,10 @@ body {
 
   .link {
     @apply text-black hover:text-accent transition-colors;
+  }
+
+  .input {
+    @apply border rounded-lg px-4 h-10 bg-content/5;
   }
 }
 

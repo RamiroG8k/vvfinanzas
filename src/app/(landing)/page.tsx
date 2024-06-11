@@ -23,9 +23,9 @@ export default function Home() {
 
 			<OurTools id="about" className="pb-48" />
 
-			<Plans id="con" />
+			<Plans id="plans" />
 
-			<Contact id="con" />
+			<Contact id="contact" className="pb-32" />
 		</Fragment>
 	);
 }

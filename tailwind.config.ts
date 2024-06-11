@@ -18,8 +18,8 @@ const config: Config = {
         content: 'hsl(var(--color-content) / <alpha-value>)',
         accent: {
           // light: 'hsl(35, 95%, 75%)',
-          DEFAULT: 'hsl(var(--color-accent) / <alpha-value>)'
-          // dark: 'hsl(35, 95%, 35%)'
+          DEFAULT: 'hsl(var(--color-accent) / <alpha-value>)',
+          dark: 'hsl(40deg, 100%, 55%)'
         }
       }
     }

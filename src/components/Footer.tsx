@@ -6,20 +6,20 @@ import TikTokIcon from '@/assets/svg/tiktok-icon.svg';
 import WhatsAppIcon from '@/assets/svg/whatsapp-icon.svg';
 
 const Footer = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
-    <footer className="bg-black text-white" {...props}>
+    <footer className={`bg-black text-white h-auto ${className}`} {...props}>
         <div className="flex justify-between items-end w-full mx-auto max-w-screen-xl p-8">
-            <div className="flex gap-2">
-                <Link href="" className="text-2xl p-2 center">
+            <div className="h-auto w-40 flex gap-4">
+                <Link href="#" className="text-2xl p-2 center relative">
                     <InstagramIcon />
                     <span className="sr-only absolute w-full h-full">Instagram</span>
                 </Link>
 
-                <Link href="" className="text-2xl p-2 center">
+                <Link href="#" className="text-2xl p-2 center relative">
                     <TikTokIcon />
                     <span className="sr-only absolute w-full h-full">TikTok</span>
                 </Link>
 
-                <Link href="" className="text-2xl p-2 center">
+                <Link href="#" className="text-2xl p-2 center relative">
                     <WhatsAppIcon />
                     <span className="sr-only absolute w-full h-full">WhatsApp</span>
                 </Link>
@@ -27,7 +27,7 @@ const Footer = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
 
             <Logo className="size-64" />
 
-            <ul className="grid gap-2 text-right">
+            <ul className="h-auto w-40 grid gap-2 text-right">
                 <li className="text-background/60 font-medium hover:text-background">
                     <Link href="#goals">Objetivos</Link>
                 </li>
@@ -48,7 +48,6 @@ const Footer = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
                     <Link href="#contact">Contacto</Link>
                 </li>
             </ul>
-
         </div>
 
         <div className="center w-full mx-auto max-w-screen-xl">
