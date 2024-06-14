@@ -28,7 +28,7 @@ const INFO = [
 ];
 
 const Goals = (props: React.HTMLProps<HTMLElement>) => (
-    <section className="flex flex-col gap-10 lg:gap-20 w-full overflow-hidden" {...props}>
+    <section className="flex flex-col gap-10 lg:gap-20 w-full" {...props}>
         <div className="text-center mx-auto w-fit grid gap-4 p-4 lg:p-0">
             <h2 className="text-4xl lg:text-6xl font-semibold">Objetivos</h2>
 
@@ -37,11 +37,13 @@ const Goals = (props: React.HTMLProps<HTMLElement>) => (
             </p>
         </div>
 
-        <div className="w-full flex gap-8 snap-x snap-mandatory">
+        <div className="w-full flex justify-start overflow-x-scroll px-4 py-8 gap-8 snap-x snap-mandatory">
+            <div className="snap-start flex flex-col justify-between flex-shrink-0 h-60 lg:h-72 w-4 lg:w-[30rem]" />
+
             {INFO.map(({ title, description, icon: Icon }, i) => (
                 <div
                     key={title}
-                    className={`snap-center flex flex-col justify-between flex-shrink-0 shadow-lg p-6 h-60 lg:h-72 w-80 lg:w-[30rem] rounded-2xl border ${i % 2 !== 0 ? 'bg-black text-white' : 'bg-zinc-100 text-black'}`}
+                    className={`snap-start flex flex-col justify-between flex-shrink-0 shadow-lg p-6 h-60 lg:h-72 w-80 lg:w-[30rem] rounded-2xl border ${i % 2 !== 0 ? 'bg-black text-white' : 'bg-zinc-100 text-black'}`}
                 >
                     <Icon className="size-16 lg:size-24" />
 
@@ -51,6 +53,8 @@ const Goals = (props: React.HTMLProps<HTMLElement>) => (
                     </div>
                 </div>
             ))}
+
+            <div className="snap-start flex flex-col justify-between flex-shrink-0 h-60 lg:h-72 w-4 lg:w-[30rem]" />
         </div>
 
         <div className="max-w-screen-2xl w-full mx-auto flex justify-end items-center gap-4 px-4">
@@ -58,7 +62,7 @@ const Goals = (props: React.HTMLProps<HTMLElement>) => (
 
             <RightArrow className="text-4xl" />
         </div>
-    </section>
+    </section >
 );
 
 export default Goals;
