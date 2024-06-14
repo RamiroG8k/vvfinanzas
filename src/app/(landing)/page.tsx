@@ -19,9 +19,9 @@ export default function Home() {
 
 			<PromotionalBanner className="my-20" />
 
-			<Services id="services" className="py-10" />
+			<Services id="services" className="lg:py-10" />
 
-			<OurTools id="about" className="pb-48" />
+			<OurTools id="about" className="pb-40 lg:pb-48" />
 
 			<Plans id="plans" />
 

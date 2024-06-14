@@ -12,8 +12,8 @@ import Plan from '@/entities/Plan';
 const PLANS: Plan[] = [new BasicPlan(), new SavingsPlan(), new DebtPlan(), new StrategicPlan()];
 
 const Plans = (props: React.HTMLProps<HTMLElement>) => (
-    <section className="rounded-[5rem] bg-white -translate-y-20 py-32 px-4">
-        <div className="max-w-screen-2xl mx-auto grid place-items-center gap-16">
+    <section className="rounded-t-[3rem] lg:rounded-t-[5rem] bg-white -translate-y-12 lg:-translate-y-20 py-20 lg:py-32 px-4">
+        <div className="max-w-screen-2xl mx-auto flex flex-col items-center gap-10 lg:gap-16">
             <div className="center gap-4 text-center leading-10">
                 <h2 className="text-4xl lg:text-6xl font-medium">¡Escoge el plan para tí!</h2>
 
@@ -23,8 +23,8 @@ const Plans = (props: React.HTMLProps<HTMLElement>) => (
             </div>
 
             <div className="shadow-md flex gap-2 p-1 rounded-full bg-white w-fit">
-                <button className="bg-accent rounded-full w-60 py-1.5 font-medium" type="button">Planes</button>
-                <button className="rounded-full w-60 py-1.5" type="button">Seguimiento Mensual</button>
+                <button className="bg-accent rounded-full w-44 lg:w-60 py-1.5 font-medium" type="button">Planes</button>
+                <button className="rounded-full w-44 lg:w-60 py-1.5" type="button">Seguimiento Mensual</button>
             </div>
 
             <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">

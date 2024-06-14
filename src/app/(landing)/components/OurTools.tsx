@@ -17,7 +17,7 @@ const INFO = [
 ];
 
 const OurTools = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
-    <section className={`bg-black text-white px-4 py-32 rounded-t-[5rem] ${className}`} {...props}>
+    <section className={`bg-black text-white px-4 py-20 lg:py-32 rounded-t-[3rem] lg:rounded-t-[5rem] ${className}`} {...props}>
         <div className="max-w-screen-2xl mx-auto flex flex-col">
             <div className="center text-center">
                 <h2 className="text-3xl lg:text-5xl">Herramientas útiles</h2>
@@ -31,7 +31,7 @@ const OurTools = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
                 height={1242}
             />
 
-            <div className="flex justify-center gap-16">
+            <div className="flex flex-col lg:flex-row justify-center gap-16">
                 {INFO.map(({ title, description }, i) => (
                     <div className="center flex-col gap-2 text-center w-96" key={title}>
                         <span className="aspect-square p-3 text-xl font-medium rounded-full w-fit bg-white text-black">0{i + 1}</span>
