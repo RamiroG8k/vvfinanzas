@@ -8,9 +8,9 @@ const Header = (props: React.HTMLProps<HTMLElement>) => (
             </h1>
 
             <p className="text-lg max-w-xl font-light">
-                VV Finanzas nace con la idea de transformar la mentalidad de las personas en
-                educación financiera de una manera amigable y personalizada de tal forma que
-                encuentren estabilidad y tranquilidad mediante el logro de sus metas.
+                Nuestra misión es transformar la mentalidad y educación financiera de las personas
+                de una manera accesible y personalizada de tal forma que encuentren tranquilidad y
+                estabilidad mediante el logro de sus metas.
             </p>
         </div>
 

@@ -6,23 +6,23 @@ import StonksIcon from '@/assets/svg/stonks-icon.svg';
 
 const INFO = [
     {
-        title: 'Administrar',
-        description: 'Administrar, controlar y planificar de mejor manera los recursos financieros a través de distintas herramientas',
+        title: 'Administración',
+        description: 'Administrar, controlar y planificar de mejor manera los recursos financieros a través de distintas herramientas.',
         icon: CashIcon
     },
     {
-        title: 'Maximizar',
-        description: 'Maximizar y optimizar capacidad de ahorro mediante una estrategia de inversión',
+        title: 'Ahorro',
+        description: 'Maximizar y optimizar capacidad de ahorro mediante distintas estrategias de inversión.',
         icon: CoinsIcon
     },
     {
         title: 'Metas',
-        description: 'Definir metas a corto, mediano y largo plazo siempre en búsqueda de estabilidad financiera',
+        description: 'Definir metas a corto, mediano y largo plazo siempre en búsqueda de estabilidad financiera.',
         icon: LikeIcon
     },
     {
         title: 'Hábitos',
-        description: 'Crear nuevos hábitos para mejorar la toma de decisiones',
+        description: 'Desarrollar nuevos hábitos financieros que ayudarán a tomar mejores decisiones.',
         icon: StonksIcon
     }
 ];
@@ -33,12 +33,12 @@ const Goals = (props: React.HTMLProps<HTMLElement>) => (
             <h2 className="text-4xl lg:text-6xl font-semibold">Objetivos</h2>
 
             <p className="text-lg max-w-xl font-light">
-                VV Finanzas nace con la idea de transformar la mentalidad de las personas en educación financiera de una manera amigable
+                Adquirir conocimientos y herramientas que fortalezcan las habilidades financieras de las personas para mejorar la toma de decisiones en el manejo del dinero.
             </p>
         </div>
 
         <div className="w-full flex justify-start overflow-x-scroll px-4 py-8 gap-8 snap-x snap-mandatory">
-            <div className="snap-start flex flex-col justify-between flex-shrink-0 h-60 lg:h-72 w-4 lg:w-[30rem]" />
+            <div className="snap-center flex flex-col justify-between flex-shrink-0 h-60 lg:h-72 w-4 lg:w-[30rem]" />
 
             {INFO.map(({ title, description, icon: Icon }, i) => (
                 <div

@@ -7,22 +7,22 @@ import PersonIcon from '@/assets/svg/person-icon.svg';
 const INFO = [
     {
         title: 'Diagnóstico financiero',
-        description: 'Elaboración de un diagnóstico financiero principalmente para conocer el punto de partida y poder aterrizar los números',
+        description: 'Elaboración de un diagnóstico financiero para aterrizar los números y así poder determinar el punto de partida.',
         icon: GraphIcon
     },
     {
         title: 'Plan financiero',
-        description: 'Desarrollo de un plan financiero personalizado proyectado a un año en relación con el resultado del diagnóstico',
+        description: 'Desarrollo de un plan financiero personalizado y proyectado a un año que mostrará la estrategia a seguir para el cumplimiento de las metas establecidas.',
         icon: CalendarIcon
     },
     {
-        title: 'Análisis personalizado',
-        description: 'Análisis de la situación actual para detectar necesidades y a su vez encontrar nuevas oportunidades de mejora',
+        title: 'Análisis e identificación de problemas y oportunidades',
+        description: 'Análisis de la situación actual para detectar cuales son los problemas para solucionar y las oportunidades a aprovechar.',
         icon: PersonIcon
     },
     {
-        title: 'Educación financiera',
-        description: 'Recomendaciones y estrategias de mejora para optimizar el ahorro y lograr las metas financieras definidas',
+        title: 'Seguimiento y control',
+        description: 'Monitoreo y ajustes mensuales al plan con el objetivo de cumplir mes a mes lo proyectado.',
         icon: DataBaseIcon
     }
 ];
@@ -37,7 +37,7 @@ const Services = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
                     <div key={title} className="grid lg:h-40 gap-4">
                         <Icon className="size-10 rounded-full border p-2 overflow-visible shadow-md" />
 
-                        <h3 className="text-xl font-semibold">{title}</h3>
+                        <h3 className="text-xl font-semibold uppercase">{title}</h3>
 
                         <p className="text-content/70 leading-snug">{description}</p>
                     </div>

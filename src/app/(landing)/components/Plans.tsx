@@ -15,10 +15,11 @@ const Plans = (props: React.HTMLProps<HTMLElement>) => (
     <section className="rounded-t-[3rem] lg:rounded-t-[5rem] bg-white -translate-y-12 lg:-translate-y-20 py-20 lg:py-32 px-4">
         <div className="max-w-screen-2xl mx-auto flex flex-col items-center gap-10 lg:gap-16">
             <div className="center gap-4 text-center leading-10">
-                <h2 className="text-4xl lg:text-6xl font-medium">¡Escoge el plan para tí!</h2>
+                <h2 className="text-4xl lg:text-6xl font-medium uppercase">¡Escoge el plan para tí!</h2>
 
-                <p className="font-light w-full leading-tight max-w-80">
-                    Conoce nuestros distintos planes para ver cual se adapta mejor a tus necesidades.
+                <p className="font-light w-full leading-tight lg:max-w-80">
+                    Conoce nuestros distintos planes para ver cuál se adapta mejor a tus necesidades
+                    y así puedas comenzar con tu diagnóstico completamente gratuito.
                 </p>
             </div>
 

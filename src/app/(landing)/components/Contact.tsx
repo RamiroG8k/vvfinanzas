@@ -15,11 +15,6 @@ const Contact = ({ className, ...props }: React.HTMLProps<HTMLElement>) => (
                     para mas info
                 </h2>
 
-                <div className="leading-tight text-sm lg:text-base">
-                    <p>¿Quieres un diagnostico financiero totalmente gratis?</p>
-                    <p>¿Tienes dudas o comentarios? </p>
-                </div>
-
                 <hr className="w-2/3 lg:w-full border-content/20" />
 
                 <form action="" className="grid gap-4 lg:gap-8">
