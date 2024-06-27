@@ -39,6 +39,10 @@ body {
   .input {
     @apply border rounded-lg px-4 h-10 bg-content/5;
   }
+
+  .button {
+    @apply cursor-pointer font-semibold px-8 py-2 rounded-lg;
+  }
 }
 
 @layer utilities {

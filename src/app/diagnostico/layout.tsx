@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps) {
 
     return (
         <div className="min-h-screen lg:py-10 max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-8 p-4">
-            <aside className="flex flex-row p-2 lg:p-4 gap-4 lg:flex-col lg:h-full lg:w-1/4 sticky top-0 bg-white">
+            <aside className="flex flex-row py-2 lg:p-4 gap-4 lg:flex-col lg:h-full lg:w-1/4 sticky top-0 bg-white">
                 <div className="hidden lg:grid">
                     <p className="text-lg font-semibold">Paso 1</p>
                     <span className="text-sm text-content/80">Por favor introduce tu información personal</span>
@@ -60,8 +60,9 @@ export default function RootLayout({ children }: LayoutProps) {
 
                 <div className="fixed bottom-0 left-0 w-full p-4 lg:p-0 lg:w-auto bg-white lg:static lg:self-end shadow-[0_0_1rem_0_rgba(0,0,0,0.1)] lg:shadow-none z-50">
                     <button
+                        className="button bg-accent/40 border border-accent/60 shadow-md w-full"
+                        form="diagnosisForm"
                         type="submit"
-                        className="bg-accent/40 font-semibold px-8 py-2 rounded-lg border border-accent/60 shadow-md w-full"
                     >
                         Siguiente
                     </button>

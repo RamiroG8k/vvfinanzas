@@ -18,7 +18,7 @@ enum ExpenseCategory {
     ENTERTAINMENT = 'Entretenimiento'
 };
 
-type Income = {
+export type Income = {
     source: string;
     amount: number;
     type: keyof typeof Classification;
