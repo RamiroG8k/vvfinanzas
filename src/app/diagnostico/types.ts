@@ -1,3 +1,11 @@
+export enum Steps {
+    INCOMES = 'Ingresos',
+    EXPENSES = 'Gastos',
+    DEBTS = 'Deudas',
+    CREDIT_CARDS = 'Tarjetas de crédito',
+    BALANCE = 'Ahorro'
+}
+
 enum Classification {
     FIXED = 'Fijo',
     VARIABLE = 'Variable'
