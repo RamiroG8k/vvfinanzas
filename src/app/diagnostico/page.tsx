@@ -2,7 +2,7 @@
 
 import { useFieldArray, useForm } from 'react-hook-form';
 import TrashIcon from '@/assets/svg/trash-icon.svg';
-import { Income } from './types';
+import { Income } from '@/entities/diagnosis';
 
 type FormValues = {
     fixed: Omit<Income, 'type'>[];
@@ -29,12 +29,18 @@ export default function DiagnosticPage() {
 
     const { fields: fixedFields, append: appendToFixedFields, remove: removeFixedField } = useFieldArray({
         control,
-        name: 'fixed'
+        name: 'fixed',
+        rules: {
+            required: true
+        }
     });
 
     const { fields: variableFields, append: appendToVariableFields, remove: removeVariableField } = useFieldArray({
         control,
-        name: 'variable'
+        name: 'variable',
+        rules: {
+            required: true
+        }
     });
 
     const onSubmit = (formData: FormValues) => {
@@ -85,7 +91,11 @@ export default function DiagnosticPage() {
                         </div>
                     ))}
 
-                    <button className="button border border-green-200 bg-green-50" type="button" onClick={() => appendToFixedFields({ source: '', amount: 0 })}>
+                    <button
+                        className="button border border-green-200 bg-green-50"
+                        type="button"
+                        onClick={() => appendToFixedFields({ source: 'Ingreso extra', amount: 0 })}
+                    >
                         Nuevo ingreso fijo
                     </button>
                 </div>
@@ -126,7 +136,7 @@ export default function DiagnosticPage() {
 
                     <button
                         className="button border border-green-200 bg-green-50"
-                        onClick={() => appendToVariableFields({ source: '', amount: 0 })}
+                        onClick={() => appendToVariableFields({ source: 'Ingreso extra', amount: 0 })}
                         type="button"
                     >
                         Nuevo ingreso variable

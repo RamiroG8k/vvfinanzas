@@ -1,3 +1,5 @@
+import { Income, Expense, Debt, CreditCard, Balance } from './types';
+
 type DiagnosisData = {
     incomes?: Income[];
     expenses?: Expense[];

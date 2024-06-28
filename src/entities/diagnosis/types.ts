@@ -24,19 +24,19 @@ export type Income = {
     type: keyof typeof Classification;
 };
 
-type Expense = {
+export type Expense = {
     category: keyof typeof ExpenseCategory;
     source: string;
     amount: number;
     type: keyof typeof Classification;
 };
 
-type Debt = {
+export type Debt = {
     source: string;
     amount: number;
 };
 
-type CreditCard = {
+export type CreditCard = {
     granted: number;
     available: number;
     used: number;
@@ -46,7 +46,7 @@ type CreditCard = {
     interestRate: number;
 };
 
-type Balance = {
+export type Balance = {
     amount: number;
     interestRate: number;
 };

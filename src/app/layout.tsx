@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
+import { ProfileContextProvider } from '@/context/profile';
 
 import { clientEnv } from '@/env/schema.mjs';
 import { inter } from '@/fonts';
@@ -26,11 +27,14 @@ export default function RootLayout({ children }: LayoutProps) {
 	return (
 		<html lang="es">
 			<body className={inter.className}>
-				<NavBar />
+				<ProfileContextProvider>
 
-				{children}
+					<NavBar />
 
-				<Footer />
+					{children}
+
+					<Footer />
+				</ProfileContextProvider>
 			</body>
 		</html>
 	);

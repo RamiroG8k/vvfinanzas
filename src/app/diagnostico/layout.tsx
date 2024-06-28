@@ -3,10 +3,12 @@ import DebtsIcon from '@/assets/svg/debt-icon.svg';
 import ExpensesIcon from '@/assets/svg/expenses-icon.svg';
 import IncomesIcon from '@/assets/svg/incomes-icon.svg';
 import SavingsIcon from '@/assets/svg/savings-icon.svg';
+
+import { Steps } from '@/entities/diagnosis';
 import { clientEnv } from '@/env/schema.mjs';
 
 import type { LayoutProps } from '@/types';
-import { Steps } from './types';
+import DiagnosisStepper from './components/DiagnosisStepper';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -58,15 +60,7 @@ export default function RootLayout({ children }: LayoutProps) {
             <section className="flex flex-col gap-8 h-full lg:w-3/4">
                 {children}
 
-                <div className="fixed bottom-0 left-0 w-full p-4 lg:p-0 lg:w-auto bg-white lg:static lg:self-end shadow-[0_0_1rem_0_rgba(0,0,0,0.1)] lg:shadow-none z-50">
-                    <button
-                        className="button bg-accent/40 border border-accent/60 shadow-md w-full"
-                        form="diagnosisForm"
-                        type="submit"
-                    >
-                        Siguiente
-                    </button>
-                </div>
+                <DiagnosisStepper />
             </section>
         </div>
     );
