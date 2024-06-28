@@ -10,8 +10,6 @@ const DiagnosisStepper = () => {
 
     return (
         <div className="fixed flex gap-4 bottom-0 left-0 w-full p-4 lg:p-0 lg:w-auto bg-white lg:static lg:self-end shadow-[0_0_1rem_0_rgba(0,0,0,0.1)] lg:shadow-none z-50">
-            <p>{step}</p>
-
             {(!isFirstStep && !isLastStep) && (
                 <button
                     className="button bg-content/5 border shadow-md w-full"

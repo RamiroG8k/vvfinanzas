@@ -1,14 +1,8 @@
-import CreditCardIcon from '@/assets/svg/card-icon.svg';
-import DebtsIcon from '@/assets/svg/debt-icon.svg';
-import ExpensesIcon from '@/assets/svg/expenses-icon.svg';
-import IncomesIcon from '@/assets/svg/incomes-icon.svg';
-import SavingsIcon from '@/assets/svg/savings-icon.svg';
-
-import { Steps } from '@/entities/diagnosis';
 import { clientEnv } from '@/env/schema.mjs';
 
 import type { LayoutProps } from '@/types';
 import DiagnosisStepper from './components/DiagnosisStepper';
+import StepProgress from './components/StepProgress';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -21,15 +15,7 @@ export const metadata: Metadata = {
     }
 };
 
-export default function RootLayout({ children }: LayoutProps) {
-    const ICONS: Record<keyof typeof Steps, any> = {
-        INCOMES: IncomesIcon,
-        EXPENSES: ExpensesIcon,
-        DEBTS: DebtsIcon,
-        CREDIT_CARDS: CreditCardIcon,
-        BALANCE: SavingsIcon
-    };
-
+export default function DiagnosisLayout({ children }: LayoutProps) {
     return (
         <div className="min-h-screen lg:py-10 max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-8 p-4">
             <aside className="flex flex-row py-2 lg:p-4 gap-4 lg:flex-col lg:h-full lg:w-1/4 sticky top-0 bg-white">
@@ -40,19 +26,7 @@ export default function RootLayout({ children }: LayoutProps) {
 
                 <hr className="hidden lg:block" />
 
-                <div className="flex overflow-scroll gap-12 lg:gap-4 lg:grid lg:h-full w-fit mx-auto">
-                    {Object.entries(Steps).map(([key, value]) => {
-                        const Icon = ICONS[key as keyof typeof Steps];
-
-                        return (
-                            <div className="flex h-fit lg:min-h-20 items-center justify-end gap-4" key={key}>
-                                <p className="text-lg font-medium whitespace-nowrap">{value}</p>
-
-                                <Icon className="bg-accent/50 text-4xl lg:text-5xl rounded-full p-2 overflow-visible" />
-                            </div>
-                        );
-                    })}
-                </div>
+                <StepProgress />
             </aside>
 
             <hr className="hidden lg:block h-full w-px min-h-96 bg-gray-200" />
@@ -64,4 +38,4 @@ export default function RootLayout({ children }: LayoutProps) {
             </section>
         </div>
     );
-}
+};
