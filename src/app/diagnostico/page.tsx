@@ -2,6 +2,7 @@
 
 import { useProfile } from '@/context/profile';
 
+import DebtsForm from './components/DebtsForm';
 import ExpensesForm from './components/ExpensesForm';
 import IncomesForm from './components/IncomesForm';
 
@@ -15,7 +16,7 @@ export default function DiagnosisPage() {
             case 'EXPENSES':
                 return <ExpensesForm />;
             case 'DEBTS':
-                // return <DebtsForm />;
+                return <DebtsForm />;
             case 'CREDIT_CARDS':
                 // return <CreditCardsForm />;
             case 'BALANCE':

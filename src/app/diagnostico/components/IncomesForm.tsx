@@ -3,7 +3,7 @@
 import { useFieldArray, useForm } from 'react-hook-form';
 import TrashIcon from '@/assets/svg/trash-icon.svg';
 import { useProfile } from '@/context/profile';
-import Diagnosis, { type Income } from '@/entities/diagnosis';
+import type { Income } from '@/entities/diagnosis';
 
 type FormValues = {
     fixed: Income[];
