@@ -6,6 +6,8 @@ export enum Steps {
     BALANCE = 'Ahorro'
 }
 
+export type AvailableSteps = keyof typeof Steps;
+
 enum Classification {
     FIXED = 'Fijo',
     VARIABLE = 'Variable'

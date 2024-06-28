@@ -2,26 +2,30 @@
 
 import { useFieldArray, useForm } from 'react-hook-form';
 import TrashIcon from '@/assets/svg/trash-icon.svg';
-import { Income } from '@/entities/diagnosis';
+import { useProfile } from '@/context/profile';
+import Diagnosis, { Income } from '@/entities/diagnosis';
 
 type FormValues = {
-    fixed: Omit<Income, 'type'>[];
-    variable: Omit<Income, 'type'>[];
+    fixed: Income[];
+    variable: Income[];
 };
 
 export default function DiagnosticPage() {
+    const { update } = useProfile();
     const { control, handleSubmit, register } = useForm<FormValues>({
         defaultValues: {
             fixed: [
                 {
                     source: 'Sueldo',
-                    amount: 10_000
+                    amount: 10_000,
+                    type: 'FIXED'
                 }
             ],
             variable: [
                 {
                     source: 'Ingreso extra',
-                    amount: 1_000
+                    amount: 1_000,
+                    type: 'VARIABLE'
                 }
             ]
         }
@@ -44,7 +48,11 @@ export default function DiagnosticPage() {
     });
 
     const onSubmit = (formData: FormValues) => {
-        console.log(formData);
+        const currentDiagnosis = new Diagnosis({
+            incomes: [...formData.fixed, ...formData.variable]
+        });
+
+        update(currentDiagnosis, 'INCOMES');
     };
 
     return (
@@ -94,7 +102,7 @@ export default function DiagnosticPage() {
                     <button
                         className="button border border-green-200 bg-green-50"
                         type="button"
-                        onClick={() => appendToFixedFields({ source: 'Ingreso extra', amount: 0 })}
+                        onClick={() => appendToFixedFields({ source: 'Ingreso extra', amount: 0, type: 'FIXED' })}
                     >
                         Nuevo ingreso fijo
                     </button>
@@ -136,7 +144,7 @@ export default function DiagnosticPage() {
 
                     <button
                         className="button border border-green-200 bg-green-50"
-                        onClick={() => appendToVariableFields({ source: 'Ingreso extra', amount: 0 })}
+                        onClick={() => appendToVariableFields({ source: 'Ingreso extra', amount: 0, type: 'VARIABLE' })}
                         type="button"
                     >
                         Nuevo ingreso variable
