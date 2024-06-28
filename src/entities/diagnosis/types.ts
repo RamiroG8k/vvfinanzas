@@ -45,8 +45,8 @@ export type CreditCard = {
     available: number;
     used: number;
     toPay: number;
-    cutOffDate: Date;
-    payOffDate: Date;
+    cutOffDate: string;
+    payOffDate: string;
     interestRate: number;
 };
 

@@ -28,11 +28,11 @@ const ORDERED_STEPS: Record<AvailableSteps, Record<'previous' | 'next', Availabl
         next: 'CREDIT_CARDS'
     },
     CREDIT_CARDS: {
-        previous: 'EXPENSES',
+        previous: 'DEBTS',
         next: 'BALANCE'
     },
     BALANCE: {
-        previous: 'EXPENSES',
+        previous: 'CREDIT_CARDS',
         next: undefined
     }
 };
