@@ -3,7 +3,7 @@
 import { useProfile } from '@/context/profile';
 
 const DiagnosisStepper = () => {
-    const { step } = useProfile();
+    const { goToPreviousStep, step } = useProfile();
 
     const isFirstStep = (step === 'INCOMES');
     const isLastStep = (step === 'BALANCE');
@@ -13,6 +13,7 @@ const DiagnosisStepper = () => {
             {(!isFirstStep && !isLastStep) && (
                 <button
                     className="button bg-content/5 border shadow-md w-full"
+                    onClick={goToPreviousStep}
                     type="button"
                 >
                     Anterior

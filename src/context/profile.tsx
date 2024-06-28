@@ -1,14 +1,15 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import { Diagnosis } from '@/entities';
 import { AvailableSteps } from '@/entities/diagnosis';
+import Diagnosis, { type DiagnosisData } from '@/entities/diagnosis/Diagnosis';
 
 type ProfileContextProps = {
+    clear: () => void;
+    goToPreviousStep: () => void;
     profile?: Diagnosis;
     step?: AvailableSteps;
-    update: (data: Diagnosis, step?: AvailableSteps) => void;
-    clear: () => void;
+    update: (data: Partial<DiagnosisData>, step?: AvailableSteps) => void;
 };
 
 const ProfileContext = createContext<ProfileContextProps>({} as ProfileContextProps);
@@ -45,7 +46,7 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
         localStorage.removeItem('profile');
     };
 
-    const update = (data: Diagnosis, step?: AvailableSteps) => {
+    const update = (data: Partial<DiagnosisData>, step?: AvailableSteps) => {
         if (step) {
             const nextStep = ORDERED_STEPS[step].next;
 
@@ -53,11 +54,16 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
                 localStorage.setItem('diagnosis-step', nextStep) :
                 localStorage.removeItem('diagnosis-step');
 
-            setCurrentStep(step);
+            setCurrentStep(nextStep);
         }
 
-        localStorage.setItem('profile', JSON.stringify(data));
-        setProfile(data);
+        let currentProfile = new Diagnosis({
+            ...profile,
+            ...data
+        });
+
+        localStorage.setItem('profile', JSON.stringify(currentProfile));
+        setProfile(currentProfile);
     };
 
     const initializeProfile = () => {
@@ -86,12 +92,26 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
         }
     };
 
+    const goToPreviousStep = () => {
+        if (!currentStep) {
+            return;
+        }
+
+        setCurrentStep(ORDERED_STEPS[currentStep].previous);
+    };
+
     useEffect(() => {
         initializeDiagnosisStep();
         initializeProfile();
     }, []);
 
-    const context = { profile, step: currentStep, update, clear };
+    const context = {
+        clear,
+        goToPreviousStep,
+        profile,
+        step: currentStep,
+        update
+    };
 
     return (
         <ProfileContext.Provider value={context}>
