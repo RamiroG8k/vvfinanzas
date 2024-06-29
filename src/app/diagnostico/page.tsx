@@ -2,6 +2,7 @@
 
 import { useProfile } from '@/context/profile';
 
+import BalanceForm from './components/BalanceForm';
 import CreditCardsForm from './components/CreditCardsForm';
 import DebtsForm from './components/DebtsForm';
 import ExpensesForm from './components/ExpensesForm';
@@ -21,9 +22,9 @@ export default function DiagnosisPage() {
             case 'CREDIT_CARDS':
                 return <CreditCardsForm />;
             case 'BALANCE':
-                // return <BalanceForm />;
+                return <BalanceForm />;
             default:
-                return null;
+                return <h2>Completado!</h2>;
         }
     };
 
