@@ -33,6 +33,10 @@ const ORDERED_STEPS: Record<AvailableSteps, Record<'previous' | 'next', Availabl
     },
     BALANCE: {
         previous: 'CREDIT_CARDS',
+        next: 'COMPLETED'
+    },
+    COMPLETED: {
+        previous: 'BALANCE',
         next: undefined
     }
 };

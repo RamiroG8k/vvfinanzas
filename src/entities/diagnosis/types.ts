@@ -3,7 +3,8 @@ export enum Steps {
     EXPENSES = 'Gastos',
     DEBTS = 'Deudas',
     CREDIT_CARDS = 'Tarjetas de crédito',
-    BALANCE = 'Ahorro'
+    BALANCE = 'Ahorro',
+    COMPLETED = 'Completado'
 }
 
 export type AvailableSteps = keyof typeof Steps;

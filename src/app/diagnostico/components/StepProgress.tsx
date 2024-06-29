@@ -1,6 +1,7 @@
 'use client';
 
 import CreditCardIcon from '@/assets/svg/card-icon.svg';
+import CheckIcon from '@/assets/svg/check-outline-icon.svg';
 import DebtsIcon from '@/assets/svg/debt-icon.svg';
 import ExpensesIcon from '@/assets/svg/expenses-icon.svg';
 import IncomesIcon from '@/assets/svg/incomes-icon.svg';
@@ -19,12 +20,15 @@ const StepProgress = () => {
         EXPENSES: ExpensesIcon,
         DEBTS: DebtsIcon,
         CREDIT_CARDS: CreditCardIcon,
-        BALANCE: SavingsIcon
+        BALANCE: SavingsIcon,
+        COMPLETED: CheckIcon
     };
+
+    const availableSteps = Object.entries(Steps).filter(([key]) => key !== 'COMPLETED');
 
     return (
         <div className="flex overflow-scroll gap-12 lg:gap-4 lg:grid lg:h-full w-fit mx-auto">
-            {Object.entries(Steps).map(([key, value]) => {
+            {availableSteps.map(([key, value]) => {
                 const Icon = ICONS[key as keyof typeof Steps];
 
                 const isActive = step === key;
