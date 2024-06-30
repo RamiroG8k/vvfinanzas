@@ -73,14 +73,16 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
     const initializeProfile = () => {
         const profile = localStorage.getItem('profile');
 
-        if (profile) {
-            setProfile(JSON.parse(profile));
-        } else {
-            const initialDiagnosis = new Diagnosis({});
+        let initialDiagnosis: Diagnosis;
 
+        if (!profile) {
+            initialDiagnosis = new Diagnosis({});
             localStorage.setItem('profile', JSON.stringify(initialDiagnosis));
-            setProfile(initialDiagnosis);
+        } else {
+            initialDiagnosis = new Diagnosis(JSON.parse(profile));
         }
+
+        setProfile(initialDiagnosis);
     };
 
     const initializeDiagnosisStep = () => {
@@ -103,6 +105,12 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
 
         setCurrentStep(ORDERED_STEPS[currentStep].previous);
     };
+
+    useEffect(() => {
+        if (currentStep === 'COMPLETED') {
+            profile?.toBase64();
+        }
+    }, [currentStep]);
 
     useEffect(() => {
         initializeDiagnosisStep();

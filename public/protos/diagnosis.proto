@@ -1,0 +1,43 @@
+syntax = "proto3";
+package diagnosis;
+
+message Diagnosis {
+    repeated Income incomes = 1;
+    repeated Expense expenses = 2;
+    repeated Debt debts = 3;
+    repeated CreditCard creditCards = 4;
+    Balance balance = 5;
+}
+
+message Income {
+    string source = 1;
+    double amount = 2;
+    string type = 3;
+}
+
+message Expense {
+    string category = 1;
+    string source = 2;
+    double amount = 3;
+    string type = 4;
+}
+
+message Debt {
+    string source = 1;
+    double amount = 2;
+}
+
+message CreditCard {
+    double granted = 1;
+    double available = 2;
+    double used = 3;
+    double toPay = 4;
+    string cutOffDate = 5;
+    string payOffDate = 6;
+    double interestRate = 7;
+}
+
+message Balance {
+    double amount = 1;
+    double interestRate = 2;
+}
