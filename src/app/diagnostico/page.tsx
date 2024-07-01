@@ -7,6 +7,7 @@ import CreditCardsForm from './components/CreditCardsForm';
 import DebtsForm from './components/DebtsForm';
 import ExpensesForm from './components/ExpensesForm';
 import IncomesForm from './components/IncomesForm';
+import ScheduleAppointment from './components/ScheduleAppointment';
 
 export default function DiagnosisPage() {
     const { step } = useProfile();
@@ -24,7 +25,7 @@ export default function DiagnosisPage() {
             case 'BALANCE':
                 return <BalanceForm />;
             default:
-                return <h2>Completado!</h2>;
+                return <ScheduleAppointment />;
         }
     };
 
