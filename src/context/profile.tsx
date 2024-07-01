@@ -107,12 +107,6 @@ export const ProfileContextProvider = ({ children }: { children: React.ReactNode
     };
 
     useEffect(() => {
-        if (currentStep === 'COMPLETED') {
-            profile?.toBase64();
-        }
-    }, [currentStep]);
-
-    useEffect(() => {
         initializeDiagnosisStep();
         initializeProfile();
     }, []);
